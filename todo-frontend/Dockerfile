@@ -10,7 +10,7 @@ USER 0
 
 COPY . /tmp/todo-frontend
 
-RUN cd /tmp/todo-frontend
+WORKDIR /tmp/todo-frontend
 RUN npm install
 RUN npm run build
 
