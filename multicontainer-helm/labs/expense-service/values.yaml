@@ -1,10 +1,10 @@
 postgres:
-  user: ""
-  pass: ""
+  user: "admin"
+  pass: "guest"
   db: "sampledb"
 
 expenseService:
   replicaCount: 1
-  image: "TODO"
+  image: "quay.io/mkfsext4/ocpdev-deployments-review:4.12"
   host: "TODO"
-  domain: "apps.ocp4.example.com"
+  domain: "api.crc.testing:6443"
