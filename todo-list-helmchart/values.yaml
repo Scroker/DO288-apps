@@ -12,7 +12,7 @@ image:
 
 imagePullSecrets: []
 nameOverride: ""
-fullnameOverride: ""
+fullnameOverride: "todo-app"
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -83,7 +83,7 @@ affinity: {}
 
 env:
   - name: DATABASE_SVC
-    value: todo-app-mariadb
+    value: todo-db
   - name: DATABASE_USER
     value: todouser
   - name: DATABASE_PASSWORD
@@ -96,6 +96,7 @@ mariadb:
     username: todouser
     password: todopwd
     database: tododb
+  fullnameOverride: todo-db
   primary:
     podSecurityContext:
       enabled: false
