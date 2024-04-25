@@ -25,4 +25,8 @@ LABEL updatedDate="2021-05-19"
 COPY nginx.conf /etc/nginx/
 COPY --from=appbuild /tmp/todo-frontend/build /usr/share/nginx/html
 
+USER nginx
+
+EXPOSE 8080
+
 CMD nginx -g "daemon off;"
